@@ -40,7 +40,7 @@ TestBench::TestBench(const Image& _input_image, const Image& _clut_image) :
 			clut_level = level;
 		}
 	}
-	if (!clut_level) {
+	if (clut_level < 2) {
 		throw Exception("CLUT image has wrong dimensions.", __FILE__, __LINE__);
 	}
 
