@@ -23,6 +23,10 @@ project(clutbench)
 
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
 
+if(NOT CMAKE_BUILD_TYPE)
+	set(CMAKE_BUILD_TYPE Release)
+endif()
+
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -Wall")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -Wall")
 
